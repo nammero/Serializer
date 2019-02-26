@@ -1,6 +1,19 @@
 #!/usr/bin/env php
 <?php
 
+use App\Serializer\Serializer;
+use App\Test\Person\Person;
+
 require_once __DIR__ . '/../vendor/autoload.php';
+
+
+$person = new Person('Ivan', 'Kovalov');
+$serializer = new Serializer();
+
+$serializedJsonPerson = $serializer->serialize($person, Serializer::JSON);
+$serializedYamlPerson = $serializer->serialize($person,Serializer::YAML);
+
+print_r($serializedJsonPerson);
+print_r($serializedYamlPerson);
 
 

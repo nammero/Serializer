@@ -1,5 +1,5 @@
 <?php
-namespace Person;
+namespace App\Test\Person;
 
 class Person
 {

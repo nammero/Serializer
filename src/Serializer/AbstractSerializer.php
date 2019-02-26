@@ -1,17 +1,9 @@
 <?php
-namespace Serializer;
+
+namespace App\Serializer;
+
 
 abstract class AbstractSerializer
 {
-    public function toJSON($object)
-    {
-    }
-
-    public function toYAML($object)
-    {
-    }
-
-    public function toXML($object)
-    {
-    }
+    abstract function serialize($object, $type);
 }
